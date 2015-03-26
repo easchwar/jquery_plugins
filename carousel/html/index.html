@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>stuff</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="../css/carousel.css" charset="utf-8">
+    <script src="../js/carousel.js"></script>
+
+    <script charset="utf-8">
+      $(function () {
+        var $carousel = new $.Carousel($('.carousel'));
+      });
+    </script>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="items">
+        <img src="http://placecorgi.com/400/300" alt="" />
+        <img src="http://placecorgi.com/500/300" alt="" />
+        <img src="http://placecorgi.com/300/300" alt="" />
+      </div>
+      <a href="javascript:void(0)" class="slide-right">Prev</a>
+      <a href="javascript:void(0)" class="slide-left">Next</a>
+    </div>
+  </body>
+</html>

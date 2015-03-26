@@ -22,9 +22,13 @@ $.Tabs.prototype.clickTab = function($a) {
   //set transition
   this.$activeTab.removeClass('active');
   this.$activeTab.addClass('transitioning');
+
   this.$contentTabs.one('transitionend', '.tab-pane', function(event) {
     $(event.currentTarget).removeClass('transitioning');
-    this.$activeTab.addClass('active');
+    this.$activeTab.addClass('active transitioning');
+    setTimeout(function() {
+      this.$activeTab.removeClass('transitioning');
+    }.bind(this), 0);
   }.bind(this));
 
   this.$activeTab = this.$contentTabs.find($a.attr('href'));
