@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+}
+
+div.tab-pane {
+  transition: opacity 0.5s;
+  display: none;
+}
+
+div.tab-pane.active {
+  display: block;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+div.tab-pane.transitioning {
+  opacity: 0;
+  display: block;
+}

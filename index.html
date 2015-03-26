@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>stuff</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="./css/tabs.css" charset="utf-8">
+    <script src="./tabs.js"></script>
+
+    <script charset="utf-8">
+      $(function () {
+        // var $tabs = $('.tabs');
+        var $tabs = new $.Tabs($('.tabs'));
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="tabs" data-content-tabs=".content-tabs">
+      <li><a href="#corgi" class="active">Corgi</a></li>
+      <li><a href="#lab">Lab</a></li>
+      <li><a href="#beagle">Beagle</a></li>
+    </ul>
+    <div class="content-tabs">
+      <div class="tab-pane active" id="corgi">
+        <p>
+          Corgis are neat.
+        </p>
+      </div>
+      <div class="tab-pane" id="lab">
+        <p>
+          Labs are also neat.
+        </p>
+      </div>
+      <div class="tab-pane" id="beagle">
+        <p>
+          This is where you read about Beagles.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
